@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  
+  <%- include('./partials/head')  %> 
+
+  <body style="text-align: center;">
+    <!-- Navbar (sit on top) -->
+    <%- include('./partials/nav')  %> 
+
+    <!-- Header -->
+    
+    <%- include('./partials/header')  %> 
+
+    <!-- Page content -->
+    <div class="ps-content">
+
+      <!-- Menu Section -->
+      <div class="ps-row ps-padding-64" id="menu">
+        <div class="ps-col l6 ps-padding-large">
+          
+              <h4> <%= plate.title %>  </h4>
+              <img src="<%= plate.image %> " alt="" style="width:300px;"> 
+              <p> <% if(plate.description != '') { %>
+                <%= plate.description %> <br/>
+              <% } else { %>
+                Plato típico. <br/>
+              <% } %> 
+                  U$S <%= plate.price %> </p>
+        </div>
+
+        <div class="ps-col l6 ps-padding-large ps-img-menu">
+          <img
+            src="/img/menu.jpg"
+            class="ps-round ps-image ps-opacity-min"
+            alt="Menu"
+            style="width: 300px;"
+          />
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <%- include('./partials/footer')  %>
+    </div>
+  </body>
+</html>
